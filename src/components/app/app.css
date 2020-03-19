@@ -1,0 +1,31 @@
+.wrApp {
+  display: flex;
+}
+
+.wrAppCol1 {
+  width: 70%;
+  border-right: 1px solid #eeeef0;
+}
+
+.wrAppCol2 {
+  width: 30%;
+}
+
+/* ================================================== /*
+ * @MEDIA SCREEN AND (max-width:991px)
+/* ================================================== */
+@media screen and (max-width: 991px) {
+  
+  .wrApp {
+    flex-direction: column;
+  }
+
+  .wrAppCol1 {
+    width: 100%;
+    border-right: none;
+  }
+
+  .wrAppCol2 {
+    width: 100%;
+  }
+}
