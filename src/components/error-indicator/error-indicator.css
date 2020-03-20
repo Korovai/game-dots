@@ -1,0 +1,29 @@
+.wrErrorIndicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.wrErrorIndicator img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.wrErrorIndicator span {
+  display: block;
+  font-size: 24px;
+  line-height: 28px;
+  color: #7b8d93;
+  text-align: center;
+}
+
+.wrErrorIndicator span.boom {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
