@@ -2,19 +2,29 @@ import React from 'react';
 
 import './header.css';
 
-const Header = () => {
+const Header = ({settings, currentModeName, onSelectMode}) => {
+  const items = settings.map((item) => {
+    const {id, mode} = item;    
+    
+    return (
+      <li key={id} onClick={() => onSelectMode(id)} className="formSelectListItem jsFormListItem">{mode}</li>
+    );
+  });
+  
+  function onOpenSelector() {
+    document.querySelector('.formSelectList').classList.toggle('isActive');
+  };
+  
   return (
     <div className="wrHeader">
     
       <div className="formSelectArrow">
     
         <div className="jsFormParent"> 
-          <div className="formSelectContent jsFormText">Pick game mode</div>
+          <div onClick={onOpenSelector} className="formSelectContent jsFormText">{currentModeName}</div>
     
           <ul className="formSelectList jsFormList">
-            <li className="formSelectListItem jsFormListItem" data-value="easy">easyMode</li>
-            <li className="formSelectListItem jsFormListItem" data-value="normal">normalMode</li>
-            <li className="formSelectListItem jsFormListItem" data-value="hard">hardMode</li>
+            {items}
           </ul>
         </div>
     

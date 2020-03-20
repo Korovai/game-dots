@@ -14,9 +14,11 @@ export default class App extends Component {
   gameService = new GameService();
   
   state = {
-    settings: {},
+    settings: [],
     loading: true,
-    error: false
+    error: false,
+    currentModeName: 'Pick game mode',
+    currentMode: []
   };
   
   componentDidMount() {
@@ -37,13 +39,28 @@ export default class App extends Component {
     this.setState({loading: false, error: true});
   };
   
+  onSelectMode = (key) => {
+    this.setState({
+      currentModeName: this.state.settings[key - 1].mode,
+      currentMode: {
+        id: key,
+        mode: this.state.settings[key - 1].mode,
+        field: this.state.settings[key - 1].field,
+        delay: this.state.settings[key - 1].delay
+      }
+    });    
+    document.querySelector('.formSelectList').classList.remove('isActive');
+  };
+  
+  
+  
   render() {
-    const {settings, loading, error} = this.state;
+    const {settings, loading, error, currentModeName, currentMode} = this.state;
     
     const app = (
       <div className="wrApp">
         <div className="wrAppCol1">
-          <Header />
+          <Header settings={settings} currentModeName={currentModeName} onSelectMode={this.onSelectMode} />
           <PlayZone />
         </div>
         <div className="wrAppCol2">
