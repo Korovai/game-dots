@@ -44,11 +44,13 @@ export default class App extends Component {
       currentModeName: this.state.settings[key - 1].mode,
       currentMode: {
         id: key,
+        size: this.state.settings[key - 1].size,
         mode: this.state.settings[key - 1].mode,
         field: this.state.settings[key - 1].field,
         delay: this.state.settings[key - 1].delay
       }
-    });    
+    });   
+    
     document.querySelector('.formSelectList').classList.remove('isActive');
   };
   
@@ -61,7 +63,7 @@ export default class App extends Component {
       <div className="wrApp">
         <div className="wrAppCol1">
           <Header settings={settings} currentModeName={currentModeName} onSelectMode={this.onSelectMode} />
-          <PlayZone />
+          <PlayZone currentMode={currentMode} />
         </div>
         <div className="wrAppCol2">
           <Results />

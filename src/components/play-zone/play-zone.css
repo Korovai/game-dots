@@ -12,7 +12,30 @@
 }
 
 .playZone {
-  width: 500px;
-  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
   border: 1px solid grey;
+}
+
+.gameRow {
+  display: flex;
+  justify-content: center;
+}
+
+.gameFiled {
+  flex-shrink: 0;
+  border: 1px solid grey;
+  margin: 1px;
+}
+
+.randomField {
+  background: #42d8e8;
+}
+
+.playField {
+  background: #00e871;
+}
+
+.computerField {
+  background: #e85a5f;
 }

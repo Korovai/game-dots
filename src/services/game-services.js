@@ -12,16 +12,6 @@ export default class GameService {
     return resSettings.map(this._transformSettings);
   };
   
-  getNameMode = (mode) => {
-    if(mode === 'easyMode') {
-      return 'Easy Mode';
-    } else if(mode === 'normalMode') {
-      return 'Normal Mode';
-    } else if(mode === 'hardMode') {
-      return 'Hard Mode';
-    } else return 'Unknown mode';
-  };
-  
   getIdMode = (mode) => {
     if(mode === 'easyMode') {
       return 1;
@@ -32,9 +22,30 @@ export default class GameService {
     } else return 'Unknown mode';
   };
   
+  getFieldSize = (mode) => {
+    if(mode === 'easyMode') {
+      return 70;
+    } else if(mode === 'normalMode') {
+      return 50;
+    } else if(mode === 'hardMode') {
+      return 30;
+    } else return 'Unknown mode';
+  };
+  
+  getNameMode = (mode) => {
+    if(mode === 'easyMode') {
+      return 'Easy Mode';
+    } else if(mode === 'normalMode') {
+      return 'Normal Mode';
+    } else if(mode === 'hardMode') {
+      return 'Hard Mode';
+    } else return 'Unknown mode';
+  };
+  
   _transformSettings = (item) => {
     return {
       id: this.getIdMode(item[0]),
+      size: this.getFieldSize(item[0]),
       mode: this.getNameMode(item[0]),
       field: item[1].field,
       delay: item[1].delay
