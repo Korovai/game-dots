@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/game-dots/static/css/main.8ee64c38.chunk.css",
+    "main.js": "/game-dots/static/js/main.00cfca60.chunk.js",
+    "main.js.map": "/game-dots/static/js/main.00cfca60.chunk.js.map",
+    "runtime-main.js": "/game-dots/static/js/runtime-main.776edd6f.js",
+    "runtime-main.js.map": "/game-dots/static/js/runtime-main.776edd6f.js.map",
+    "static/js/2.6fb7f896.chunk.js": "/game-dots/static/js/2.6fb7f896.chunk.js",
+    "static/js/2.6fb7f896.chunk.js.map": "/game-dots/static/js/2.6fb7f896.chunk.js.map",
+    "index.html": "/game-dots/index.html",
+    "precache-manifest.6ea504e67e15bb2934c2043970084b7d.js": "/game-dots/precache-manifest.6ea504e67e15bb2934c2043970084b7d.js",
+    "service-worker.js": "/game-dots/service-worker.js",
+    "static/css/main.8ee64c38.chunk.css.map": "/game-dots/static/css/main.8ee64c38.chunk.css.map",
+    "static/js/2.6fb7f896.chunk.js.LICENSE.txt": "/game-dots/static/js/2.6fb7f896.chunk.js.LICENSE.txt",
+    "static/media/error.png": "/game-dots/static/media/error.02430bb8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776edd6f.js",
+    "static/js/2.6fb7f896.chunk.js",
+    "static/css/main.8ee64c38.chunk.css",
+    "static/js/main.00cfca60.chunk.js"
+  ]
+}
