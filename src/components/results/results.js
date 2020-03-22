@@ -2,25 +2,23 @@ import React from 'react';
 
 import './results.css';
 
-const  Results = () => {
+const  Results = ({winners}) => {
+  const items = winners.map((item) => {
+    const {id, winner, date} = item;
+    
+    return (
+      <li key={id} className="leaderListItem">
+        <div className="plaerName">{winner}</div>
+        <div className="victoryDate">{date}</div>
+      </li>    
+    );
+  });
+  
   return (
     <div className="wrResults">
       <div className="resultsTitle">Leader Board</div>
       <ul className="leaderList">
-        <li className="leaderListItem">
-          <div className="plaerName">User Name</div>
-          <div className="victoryDate">Date and Time</div>
-        </li>
-    
-        <li className="leaderListItem">
-          <div className="plaerName">User Name</div>
-          <div className="victoryDate">Date and Time</div>
-        </li>
-    
-        <li className="leaderListItem">
-          <div className="plaerName">User Name</div>
-          <div className="victoryDate">Date and Time</div>
-        </li>
+        {items}
       </ul>
     </div>
   );

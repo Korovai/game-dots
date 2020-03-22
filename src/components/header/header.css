@@ -94,6 +94,7 @@
 }
 
 .btnPlay {
+  min-width: 100px;
   height: 40px;
   border: none;
   border-radius: 5px;
@@ -105,4 +106,10 @@
 
 .btnPlay:hover {
   background: #cfd8dc;
+}
+
+.btnPlay:focus,
+.btnPlay:active {
+  border: none;
+  outline: none;
 }

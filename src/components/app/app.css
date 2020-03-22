@@ -1,3 +1,8 @@
+body {
+  margin: 15px;
+  user-select: none;
+}
+
 .wrApp {
   display: flex;
 }
@@ -27,5 +32,84 @@
 
   .wrAppCol2 {
     width: 100%;
+  }
+  
+  .leaderList {
+    max-width: 500px;
+  }
+}
+
+/* ================================================== /*
+ * @MEDIA SCREEN AND (max-width:667px)
+/* ================================================== */
+@media screen and (max-width: 667px) {
+  
+  .wrHeader {
+    flex-direction: column;
+    padding: 0 0 15px 0;
+  }
+  
+  .formSelectArrow {
+    width: 420px;
+  }
+  
+  .wrNameUser {
+    margin: 15px 0;
+  }
+  
+  .nameUser {
+    width: 390px;
+    border-radius: 5px;
+  }
+  
+  .btnPlay {
+    width: 420px;
+  }
+  
+  .wrMessage {
+    width: 420px;
+    margin: 15px 0;
+  }
+  
+  .resultsTitle {
+    padding: 15px 0;
+  }
+
+  .leaderList {
+    max-width: 435px;
+  }
+}
+
+/* ================================================== /*
+ * @MEDIA SCREEN AND (max-width:467px)
+/* ================================================== */
+@media screen and (max-width: 467px) {
+  
+  .formSelectArrow {
+    width: 290px;
+  }
+  
+  .nameUser {
+    width: 260px;
+  }
+  
+  .btnPlay {
+    width: 290px;
+  }
+  
+  .wrMessage {
+    width: 290px;
+  }
+  
+  .leaderList {
+    max-width: 290px;
+  }
+  
+  .leaderListItem {
+    flex-direction: column;
+  }
+  
+  .plaerName {
+    margin: 0 0 5px 0;
   }
 }

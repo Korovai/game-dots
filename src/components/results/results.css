@@ -12,6 +12,8 @@
 }
 
 .leaderList {
+  width: 96%;
+  max-width: 350px;
   margin: 0;
   padding: 0;
 }
@@ -19,6 +21,7 @@
 .leaderListItem {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 1px;
   padding: 10px 15px;
   background: #cfd8dc;
@@ -29,4 +32,8 @@
 
 .plaerName {
   margin-right: 30px;
+}
+
+.victoryDate {
+  font-size: 14px;
 }

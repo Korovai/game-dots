@@ -2,7 +2,7 @@ import React from 'react';
 
 import './header.css';
 
-const Header = ({settings, currentModeName, onSelectMode}) => {
+const Header = ({settings, onOpenSelector, currentModeName, onSelectMode, gameStart, onGetDataPlayer}) => {
   const items = settings.map((item) => {
     const {id, mode} = item;    
     
@@ -10,29 +10,21 @@ const Header = ({settings, currentModeName, onSelectMode}) => {
       <li key={id} onClick={() => onSelectMode(id)} className="formSelectListItem jsFormListItem">{mode}</li>
     );
   });
-  
-  function onOpenSelector() {
-    document.querySelector('.formSelectList').classList.toggle('isActive');
-  };
-  
+
   return (
     <div className="wrHeader">
-    
       <div className="formSelectArrow">
-    
         <div className="jsFormParent"> 
           <div onClick={onOpenSelector} className="formSelectContent jsFormText">{currentModeName}</div>
-    
           <ul className="formSelectList jsFormList">
             {items}
           </ul>
         </div>
-    
       </div>
-      
-      <div className="wrNameUser"><input type="text" className="nameUser" placeholder="Enter your name" /></div>
     
-      <div><button className="btnPlay">Play</button></div>
+      <div className="wrNameUser"><input onChange={onGetDataPlayer} type="text" className="nameUser" maxLength="20" placeholder="Enter your name" /></div>
+    
+      <div><button onClick={gameStart} className="btnPlay">Play</button></div>
     </div>
   );
 };
