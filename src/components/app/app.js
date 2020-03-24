@@ -34,6 +34,12 @@ export default class App extends Component {
     this.loadingGameSettings();
     this.loadingLeaderBoard();
   };
+  
+  componentDidUpdate(prevState) {
+    if(this.state.winnerDate !== prevState.winnerDate) {
+      this.loadingLeaderBoard();
+    }
+  }
 
   loadingGameSettings = () => {
     this.gameService
@@ -297,7 +303,7 @@ export default class App extends Component {
       },
       body: JSON.stringify(userData)
     })
-    .then((response) => console.log('Congratulations, data sent successfully'))
+    .then((response) => console.log('Congratulations, data sent successfully!'))
     .catch((error) => console.error(error));
   };
 

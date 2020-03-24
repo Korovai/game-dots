@@ -45,8 +45,11 @@ body {
 @media screen and (max-width: 667px) {
   
   .wrHeader {
-    flex-direction: column;
     padding: 0 0 15px 0;
+  }
+  
+  .startingForm {
+    flex-direction: column;
   }
   
   .formSelectArrow {

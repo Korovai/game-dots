@@ -1,9 +1,23 @@
 .wrHeader {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #eeeef0;
   padding: 30px;
+}
+
+.title {
+  padding: 0 0 30px;
+  font-size: 32px;
+  color: #a1a1a1;
+  text-align: center;
+}
+
+.startingForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .formSelectArrow {

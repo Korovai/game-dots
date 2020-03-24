@@ -13,18 +13,21 @@ const Header = ({settings, onOpenSelector, currentModeName, onSelectMode, gameSt
 
   return (
     <div className="wrHeader">
-      <div className="formSelectArrow">
-        <div className="jsFormParent"> 
-          <div onClick={onOpenSelector} className="formSelectContent jsFormText">{currentModeName}</div>
-          <ul className="formSelectList jsFormList">
-            {items}
-          </ul>
+      <div className="title">- Game In Dots -</div>
+      <div className="startingForm">
+        <div className="formSelectArrow">
+          <div className="jsFormParent"> 
+            <div onClick={onOpenSelector} className="formSelectContent jsFormText">{currentModeName}</div>
+            <ul className="formSelectList jsFormList">
+              {items}
+            </ul>
+          </div>
         </div>
+
+        <div className="wrNameUser"><input onChange={onGetDataPlayer} type="text" className="nameUser" maxLength="20" placeholder="Enter your name" /></div>
+
+        <div><button onClick={gameStart} className="btnPlay">Play</button></div>
       </div>
-    
-      <div className="wrNameUser"><input onChange={onGetDataPlayer} type="text" className="nameUser" maxLength="20" placeholder="Enter your name" /></div>
-    
-      <div><button onClick={gameStart} className="btnPlay">Play</button></div>
     </div>
   );
 };
